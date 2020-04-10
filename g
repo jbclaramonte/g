@@ -46,8 +46,11 @@ while [ "$1" != "" ]; do
                         ;;
                     esac
                 ;;
-                *)
+                configs)
                     gcloud config configurations list
+                ;;
+                *)
+                  echo "missing something after list: projects or configs"  
                 ;;
             esac
             exit
